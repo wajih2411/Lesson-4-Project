@@ -1,4 +1,4 @@
-Cypress.Commands.add('visitAndInteract', (url, action, options = {}) => {
+Cypress.Commands.add('visitAndLogin', (url, action, options = {}) => {
     cy.visit(url);
 
     switch(action) {

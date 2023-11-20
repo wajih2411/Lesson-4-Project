@@ -1,4 +1,4 @@
-Cypress.Commands.add('visitAndInteract', (url, action, options = {}) => {
+Cypress.Commands.add('visitAndLogin', (url, action, options = {}) => {
     cy.visit(url);
 
     switch(action) {
@@ -12,7 +12,7 @@ Cypress.Commands.add('visitAndInteract', (url, action, options = {}) => {
 
 describe('Custom Visit and Interact Command Test', () => {
     it('should log in successfully - saucelabs', () => {
-        cy.visitAndInteract('https://www.saucedemo.com/', 'login', {
+        cy.visitAndLogin('https://www.saucedemo.com/', 'login', {
             usernameSelector: '#user-name',
             username: 'standard_user',
             passwordSelector: '#password',
@@ -21,7 +21,7 @@ describe('Custom Visit and Interact Command Test', () => {
         });
     });
     it('should log in successfully - practice test automation', () => {
-        cy.visitAndInteract('https://practicetestautomation.com/practice-test-login/', 'login', {
+        cy.visitAndLogin('https://practicetestautomation.com/practice-test-login/', 'login', {
             usernameSelector: '#username',
             username: 'student',
             passwordSelector: '#password',

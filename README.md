@@ -8,13 +8,15 @@ https://github.com/wajih2411/lesson-4-project
 
 ## How to Use
 
-To utilize the visitAndInteract command in your Cypress tests, follow these steps:
+The idea of this project is to create a custom command. The command created by me is 'visitAndLogin'.
+
+To utilize the visitAndLogin command in your Cypress tests, follow these steps:
 
 1. Import the Command: Ensure customCommands.js is imported in your commands.js file in the Cypress support directory.
 
 2. To perform a login action:
 
-cy.visitAndInteract('http://example.com/login', 'login', {
+cy.visitAndLogin('http://example.com/login', 'login', {
     usernameSelector: '#username',
     username: 'yourUsername',
     passwordSelector: '#password',
